@@ -3,7 +3,17 @@
 이 프로젝트는 [Create React Native App](https://github.com/react-community/create-react-native-app).
 을 기반으로 하고 있으며 React Native의 `Animated` API를 이용해서 다양한 애니메이션 예제들을 모아놓은 프로젝트입니다.
 
-## 싫행
+## 패키지 설치
+
+먼저, 패키지들을 설치해주세요.
+
+```
+yarn
+# or
+npm install
+```
+
+## 실행
 
 일반적인 react-native 앱과 달리 expo를 기반으로 하고 있기 때문에 실행 명령어가 다릅니다. 아래 명령어들을 통해서 실행하세요.
 
