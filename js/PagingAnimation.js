@@ -1,3 +1,8 @@
+/*
+ * Reference:
+ * https://github.com/facebook/react-native/blob/master/Libraries/LayoutAnimation/LayoutAnimation.js
+ * https://github.com/facebook/react-native/blob/90eaeb019b2056150cae541a59720daad21466ef/RNTester/js/ListViewPagingExample.js
+ */
 import React from 'react';
 import {
   Image,
