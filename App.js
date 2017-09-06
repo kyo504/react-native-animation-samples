@@ -21,6 +21,7 @@ import LayoutAnimation2 from './js/LayoutAnimation2';
 import LayoutAnimation3 from './js/LayoutAnimation3';
 import LayoutEventAnimation from './js/LayoutEventAnimation';
 import PagingAnimation from './js/PagingAnimation';
+import PanResponderExample from './js/PanResponderExample';
 
 const AppNavigator = StackNavigator({
   MainScreen: { screen: MainScreen },
@@ -42,6 +43,7 @@ const AppNavigator = StackNavigator({
   Layout3Screen: { screen: LayoutAnimation3 },
   LayoutEventScreen: { screen: LayoutEventAnimation },
   PagingScreen: { screen: PagingAnimation },
+  PanResponderScreen: { screen: PanResponderExample },
 });
 
 // In order to enable LayoutAnimation on Android, we need to set the following flag to true
