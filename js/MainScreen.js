@@ -59,6 +59,9 @@ class MainScreen extends Component {
         <TouchableHighlight style={styles.button} onPress={() => this.goTo('LayoutEventScreen')}>
           <Text>LayoutEventAnimation</Text>
         </TouchableHighlight>        
+        <TouchableHighlight style={styles.button} onPress={() => this.goTo('PagingScreen')}>
+          <Text>PagingAnimation</Text>
+        </TouchableHighlight>        
       </ScrollView>
     );
   }
