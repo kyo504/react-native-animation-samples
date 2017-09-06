@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, UIManager } from 'react-native';
+import { StyleSheet, Text, View, UIManager, Platform } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import MainScreen from './js/MainScreen';
@@ -16,6 +16,10 @@ import BounceAnimation from './js/BounceAnimation';
 import CompositeAnimation from './js/CompositeAnimation';
 import EasingAnimation from './js/EasingAnimation';
 import ChasingAnimation from './js/ChasingAnimation';
+import LayoutAnimation1 from './js/LayoutAnimation1';
+import LayoutAnimation2 from './js/LayoutAnimation2';
+import LayoutAnimation3 from './js/LayoutAnimation3';
+import LayoutEventAnimation from './js/LayoutEventAnimation';
 
 const AppNavigator = StackNavigator({
   MainScreen: { screen: MainScreen },
@@ -32,10 +36,17 @@ const AppNavigator = StackNavigator({
   CompositeScreen: { screen: CompositeAnimation },
   EasingScreen: { screen: EasingAnimation },
   ChasingScreen: { screen: ChasingAnimation },
+  Layout1Screen: { screen: LayoutAnimation1 },
+  Layout2Screen: { screen: LayoutAnimation2 },
+  Layout3Screen: { screen: LayoutAnimation3 },
+  LayoutEventScreen: { screen: LayoutEventAnimation },
 });
 
 // In order to enable LayoutAnimation on Android, we need to set the following flag to true
-UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
+// Enable LayoutAnimation under Android
+if (Platform.OS === 'android') {
+  UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
+}
 
 export default class App extends React.Component {
   render() {

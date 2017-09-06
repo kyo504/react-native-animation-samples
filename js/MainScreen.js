@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
+import { ScrollView, Text, StyleSheet, TouchableHighlight } from 'react-native';
 
 class MainScreen extends Component {
   goTo = routeName => {
@@ -7,7 +7,7 @@ class MainScreen extends Component {
   };
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <TouchableHighlight style={styles.button} onPress={() => this.goTo('TimingScreen')}>
           <Text>TimingAnimation</Text>
         </TouchableHighlight>
@@ -47,7 +47,19 @@ class MainScreen extends Component {
         <TouchableHighlight style={styles.button} onPress={() => this.goTo('ChasingScreen')}>
           <Text>ChasingAnimation</Text>
         </TouchableHighlight>        
-      </View>
+        <TouchableHighlight style={styles.button} onPress={() => this.goTo('Layout1Screen')}>
+          <Text>LayoutAnimation1</Text>
+        </TouchableHighlight>        
+        <TouchableHighlight style={styles.button} onPress={() => this.goTo('Layout2Screen')}>
+          <Text>LayoutAnimation2</Text>
+        </TouchableHighlight>        
+        <TouchableHighlight style={styles.button} onPress={() => this.goTo('Layout3Screen')}>
+          <Text>LayoutAnimation3</Text>
+        </TouchableHighlight>        
+        <TouchableHighlight style={styles.button} onPress={() => this.goTo('LayoutEventScreen')}>
+          <Text>LayoutEventAnimation</Text>
+        </TouchableHighlight>        
+      </ScrollView>
     );
   }
 }
